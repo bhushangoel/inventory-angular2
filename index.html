@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Support</title>
+
+    <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="app/css/app.css" media="screen,projection">
+</head>
+<body>
+<my-app>Loading App...</my-app>
+
+<!--for older browsers
+    this brings ES2015 capabilities to ES5 browsers-->
+<script src="node_modules/core-js/client/shim.min.js"></script>
+
+<!--zone file required by angular
+for change detection and data binding-->
+<script src="node_modules/zone.js/dist/zone.min.js"></script>
+<script src="node_modules/systemjs/dist/system.src.js"></script>
+
+<script src="systemjs.config.js"></script>
+
+<!--loading js files-->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!--default to load system app-->
+<script>
+    System.import('app').catch(function (err) {
+        console.error(err);
+    });
+</script>
+</body>
+</html>
