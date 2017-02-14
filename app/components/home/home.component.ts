@@ -7,6 +7,6 @@ import {Component} from '@angular/core';
 
 export class HomeComponent {
     constructor() {
-        // this.page = 'Home Page Called';
+        this.page = 'Home Page Called';
     }
 }
