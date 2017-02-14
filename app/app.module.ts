@@ -7,7 +7,7 @@ import {FormsModule} from '@angular/forms';
 
 //components
 import {AppComponent} from './app.component';
-import {HomeComponent} from './components/home/home.component'
+import {HomeComponent} from './components/home/home.component';
 
 //Routes
 const appRoutes: Routes = [
@@ -17,7 +17,7 @@ const appRoutes: Routes = [
 
 //decorator
 @NgModule({
-    imports: [NgModule, BrowserModule, RouterModule.forRoot(appRoutes), HttpModule, FormsModule],
+    imports: [BrowserModule, RouterModule.forRoot(appRoutes), HttpModule, FormsModule],
     declarations: [AppComponent, HomeComponent],
     bootstrap: [AppComponent]
 })
