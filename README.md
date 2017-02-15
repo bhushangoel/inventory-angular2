@@ -1,3 +1,3 @@
 # support-angular2
 
-Raise support ticket app based on angular2 and typescript for POC
+Product inventory management app based on angular2 and typescript for POC
