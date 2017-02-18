@@ -9,16 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var shared_service_1 = require('../shared.service');
 var HomeComponent = (function () {
-    function HomeComponent() {
-        this.page = 'Home Page Called';
+    function HomeComponent(sharedService) {
+        this.sharedService = sharedService;
     }
+    HomeComponent.prototype.ngOnInit = function () {
+        this.loadProducts();
+    };
+    HomeComponent.prototype.loadProducts = function () {
+        var _this = this;
+        this.sharedService.getData('products')
+            .subscribe(function (products) { return _this.products = products; });
+    };
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',
-            templateUrl: 'app/components/home/home.component.html'
+            templateUrl: 'app/components/home/home.component.html',
+            providers: [shared_service_1.SharedService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [shared_service_1.SharedService])
     ], HomeComponent);
     return HomeComponent;
 }());

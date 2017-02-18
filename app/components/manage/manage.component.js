@@ -9,15 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var shared_service_1 = require('../shared.service');
 var ManageComponent = (function () {
-    function ManageComponent() {
+    function ManageComponent(sharedservice) {
+        this.sharedservice = sharedservice;
+        this.products = [];
     }
+    ManageComponent.prototype.ngOnInit = function () {
+        this.loadData();
+    };
+    ManageComponent.prototype.loadData = function () {
+        var _this = this;
+        this.sharedservice.getData('products')
+            .subscribe(function (products) {
+            _this.products = products;
+        });
+    };
+    ManageComponent.prototype.addNew = function () {
+    };
     ManageComponent = __decorate([
         core_1.Component({
             selector: 'manage',
-            templateUrl: 'app/components/manage/manage.component.html'
+            templateUrl: 'app/components/manage/manage.component.html',
+            providers: [shared_service_1.SharedService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [shared_service_1.SharedService])
     ], ManageComponent);
     return ManageComponent;
 }());

@@ -1,0 +1,32 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar-brand img {
+    height: 25px;
+}
+
+.navbar {
+    background: #1976D2;
+}
+
+.navbar-nav li a {
+    color: #ffffff !important;
+    text-transform: uppercase;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.pull-right {
+    float: right;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.f13 {
+    font-size: 13px;
+}

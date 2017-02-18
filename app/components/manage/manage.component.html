@@ -1,1 +1,32 @@
-Manage Inventory Admin
+<h1>Manage Inventory</h1>
+<div class="row mb-10">
+    <div class="col-12">
+        <button type="button" class="btn btn-info pull-right" routerLink="product/add">Add New</button>
+    </div>
+</div>
+<div class="row" *ngIf="products && !products.length">
+    <div class="col-12">No Records Found</div>
+</div>
+<div class="row" *ngIf="products && products.length">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>description</th>
+                <th>category</th>
+                <th>price</th>
+                <th>quantity</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let product of products">
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
