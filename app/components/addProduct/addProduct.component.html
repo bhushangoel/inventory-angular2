@@ -1,0 +1,83 @@
+<div class="row mt-20">
+    <div class="col-8">
+        <h4>Add New Product</h4>
+        <form name="productForm" novalidate (submit)="save(addForm)" #addForm="ngForm">
+            <div class="form-group row">
+                <label for="name" class="col-2 col-form-label">Name</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" id="name" name="name" [(ngModel)]="formData.name" required
+                           #name="ngModel">
+
+                    <div *ngIf="addForm.submitted || (name.errors && (name.dirty || name.touched))">
+                        <span [hidden]="!name.errors?.required" class="text-danger f13">Please enter name</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="desc" class="col-2 col-form-label">Description</label>
+                <div class="col-10">
+                    <textarea class="form-control" type="search"
+                              id="desc" name="desc" [(ngModel)]="formData.desc" required #desc="ngModel"></textarea>
+
+                    <div *ngIf="addForm.submitted || (desc.errors && (desc.dirty || desc.touched))">
+                        <span [hidden]="!desc.errors?.required" class="text-danger f13">Please enter description</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Category</label>
+                <div class="col-10">
+                    <select class="form-control" name="category" [(ngModel)]="formData.category" required
+                            #category="ngModel">
+                        <option value="">Select Category</option>
+                        <option [value]="category" *ngFor="let category of categories">{{category}}</option>
+                    </select>
+
+                    <div *ngIf="addForm.submitted || (category.errors && (category.dirty || category.touched))">
+                        <span [hidden]="!category.errors?.required"
+                              class="text-danger f13">Please select category</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="price" class="col-2 col-form-label">Price</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" name="price" id="price" [(ngModel)]="formData.price"
+                           required #price="ngModel" pattern="^[0-9]*$">
+
+                    <div *ngIf="addForm.submitted || (price.errors && (price.dirty || price.touched))">
+                        <span [hidden]="!price.errors?.required" class="text-danger f13">Please enter price</span>
+                        <span [hidden]="!price.errors?.pattern"
+                              class="text-danger f13">Please enter numeric value only</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="quantity" class="col-2 col-form-label">Quantity</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" name="quantity" id="quantity"
+                           [(ngModel)]="formData.quantity" required #quantity="ngModel">
+
+                    <div *ngIf="addForm.submitted || (quantity.errors && (quantity.dirty || quantity.touched))">
+                        <span [hidden]="!quantity.errors?.required" class="text-danger f13">Please enter quantity</span>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary pull-right">Save Product</button>
+        </form>
+    </div>
+    <div class="col-4">
+        <h4>Product Preview</h4>
+        <div class="card" *ngIf="showPreview">
+            <div class="card-block">
+                <h3 class="card-title">{{formData.name}}</h3>
+                <p class="card-text">{{formData.desc}}</p>
+                <p>
+                    <span class="text-info">{{formData.price | number}}</span>
+                    <span class="text-warning">Quantity: {{formData.quantity}}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
