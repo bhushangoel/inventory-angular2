@@ -14,6 +14,9 @@ import {AddProductComponent} from './components/addProduct/addProduct.component'
 //services
 import {SharedService} from './components/shared.service';
 
+//pipes
+import {TruncatePipe} from './components/pipes';
+
 //Routes
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -25,7 +28,7 @@ const appRoutes: Routes = [
 //decorator
 @NgModule({
     imports: [BrowserModule, RouterModule.forRoot(appRoutes), HttpModule, FormsModule],
-    declarations: [AppComponent, HomeComponent, ManageComponent, AddProductComponent],
+    declarations: [AppComponent, HomeComponent, ManageComponent, AddProductComponent, TruncatePipe],
     bootstrap: [AppComponent],
     providers: [SharedService]
 })

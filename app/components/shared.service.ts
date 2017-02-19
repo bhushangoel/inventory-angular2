@@ -19,12 +19,12 @@ export class SharedService {
     }
 
     getData(url: string) {
-        return this.http.get(`${config.apiPath}${url}`)
+        return this.http.get(`${config.apiPathProd}${url}`)
             .map((response: Response) => response.json())
     }
 
     addData(url: string, data: {}) {
-        return this.http.post(`${config.apiPath}${url}`, data)
+        return this.http.post(`${config.apiPathProd}${url}`, data)
             .map((response: Response) => console.log(response))
     }
 }

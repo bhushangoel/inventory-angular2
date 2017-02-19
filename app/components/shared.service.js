@@ -30,11 +30,11 @@ var SharedService = (function () {
         this.http = http;
     }
     SharedService.prototype.getData = function (url) {
-        return this.http.get("" + const_service_1.config.apiPath + url)
+        return this.http.get("" + const_service_1.config.apiPathProd + url)
             .map(function (response) { return response.json(); });
     };
     SharedService.prototype.addData = function (url, data) {
-        return this.http.post("" + const_service_1.config.apiPath + url, data)
+        return this.http.post("" + const_service_1.config.apiPathProd + url, data)
             .map(function (response) { return console.log(response); });
     };
     SharedService = __decorate([

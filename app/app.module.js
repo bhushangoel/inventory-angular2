@@ -21,6 +21,8 @@ var manage_component_1 = require('./components/manage/manage.component');
 var addProduct_component_1 = require('./components/addProduct/addProduct.component');
 //services
 var shared_service_1 = require('./components/shared.service');
+//pipes
+var pipes_1 = require('./components/pipes');
 //Routes
 var appRoutes = [
     { path: '', component: home_component_1.HomeComponent },
@@ -35,7 +37,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes), http_1.HttpModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, manage_component_1.ManageComponent, addProduct_component_1.AddProductComponent],
+            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, manage_component_1.ManageComponent, addProduct_component_1.AddProductComponent, pipes_1.TruncatePipe],
             bootstrap: [app_component_1.AppComponent],
             providers: [shared_service_1.SharedService]
         }), 

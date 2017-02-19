@@ -8,9 +8,9 @@
         <div class="card">
             <div class="card-block">
                 <h3 class="card-title">{{product.name}}</h3>
-                <p class="card-text">{{product.desc}}.</p>
+                <p class="card-text">{{product.desc | truncate:10}}</p>
                 <p>
-                    <span class="text-info">Rs. {{product.price | number}}</span>
+                    <span class="text-info">{{product.price | currency:'INR':true}}</span>
                     <span> | </span>
                     <span class="text-warning">Quantity: {{product.quantity}}</span>
                 </p>
