@@ -21,12 +21,8 @@ export class ManageComponent implements OnInit {
         this.sharedservice.getData('products')
             .subscribe(
                 products => {
-                    this.products = products
+                    this.products = products;
                 }
             )
-    }
-
-    addNew() {
-
     }
 }

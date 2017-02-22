@@ -29,6 +29,7 @@ var SharedService = (function () {
     function SharedService(http) {
         this.http = http;
     }
+    //using rxJs to fetch data
     SharedService.prototype.getData = function (url) {
         return this.http.get("" + const_service_1.config.apiPathProd + url)
             .map(function (response) { return response.json(); });

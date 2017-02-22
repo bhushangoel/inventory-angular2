@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {SharedService, Products} from '../shared.service';
 
 @Component({
-    selector: 'add-product',
+    selector: 'addproduct',
     templateUrl: 'app/components/addProduct/addProduct.component.html',
     providers: [SharedService]
 })
@@ -11,8 +11,10 @@ export class AddProductComponent {
     categories: any[];
     formData = {};
     showPreview: boolean = false;
+    heading = 'Add New Product';
 
     constructor(private sharedService: SharedService) {
+        // this.heading:string = 'Add New Product';
         this.loadCategories();
     }
 

@@ -15,6 +15,8 @@ var AddProductComponent = (function () {
         this.sharedService = sharedService;
         this.formData = {};
         this.showPreview = false;
+        this.heading = 'Add New Product';
+        // this.heading:string = 'Add New Product';
         this.loadCategories();
     }
     AddProductComponent.prototype.loadCategories = function () {
@@ -35,7 +37,7 @@ var AddProductComponent = (function () {
     };
     AddProductComponent = __decorate([
         core_1.Component({
-            selector: 'add-product',
+            selector: 'addproduct',
             templateUrl: 'app/components/addProduct/addProduct.component.html',
             providers: [shared_service_1.SharedService]
         }), 

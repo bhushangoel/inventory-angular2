@@ -25,8 +25,6 @@ var ManageComponent = (function () {
             _this.products = products;
         });
     };
-    ManageComponent.prototype.addNew = function () {
-    };
     ManageComponent = __decorate([
         core_1.Component({
             selector: 'manage',

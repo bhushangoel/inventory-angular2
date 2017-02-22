@@ -18,6 +18,7 @@ export class SharedService {
 
     }
 
+    //using rxJs to fetch data
     getData(url: string) {
         return this.http.get(`${config.apiPathProd}${url}`)
             .map((response: Response) => response.json())
