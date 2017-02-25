@@ -9,15 +9,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var shared_service_1 = require('../shared.service');
 var EditProductComponent = (function () {
-    function EditProductComponent() {
+    function EditProductComponent(route, sharedService) {
+        this.route = route;
+        this.sharedService = sharedService;
+        this.formData = {};
+        this.loadCategories();
     }
+    EditProductComponent.prototype.loadCategories = function () {
+        var _this = this;
+        this.sharedService.getData('categories')
+            .subscribe(function (result) { return _this.categories = result; });
+    };
+    EditProductComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params
+            .map(function (params) { return params['id']; })
+            .do(function (id) { return _this.id = +id; })
+            .subscribe(function (id) { return _this.getProduct(); });
+    };
+    EditProductComponent.prototype.getProduct = function () {
+        var _this = this;
+        this.sharedService.getData("products/" + this.id)
+            .subscribe(function (result) {
+            _this.formData = result;
+        });
+    };
     EditProductComponent = __decorate([
         core_1.Component({
             selector: 'editproduct',
-            template: '<addproduct></addproduct>'
+            templateUrl: 'app/components/addProduct/addProduct.component.html',
+            providers: [shared_service_1.SharedService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, shared_service_1.SharedService])
     ], EditProductComponent);
     return EditProductComponent;
 }());

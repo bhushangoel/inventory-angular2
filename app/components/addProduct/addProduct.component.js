@@ -16,7 +16,6 @@ var AddProductComponent = (function () {
         this.formData = {};
         this.showPreview = false;
         this.heading = 'Add New Product';
-        // this.heading:string = 'Add New Product';
         this.loadCategories();
     }
     AddProductComponent.prototype.loadCategories = function () {

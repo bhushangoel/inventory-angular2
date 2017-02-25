@@ -14,7 +14,6 @@ export class AddProductComponent {
     heading = 'Add New Product';
 
     constructor(private sharedService: SharedService) {
-        // this.heading:string = 'Add New Product';
         this.loadCategories();
     }
 

@@ -8,7 +8,7 @@ import {SharedService, Products} from '../shared.service';
 })
 
 export class ManageComponent implements OnInit {
-    products: Products[] = [];
+    products: Promise<Products[]>;
 
     constructor(private sharedservice: SharedService) {
     }
@@ -18,11 +18,11 @@ export class ManageComponent implements OnInit {
     }
 
     loadData() {
-        this.sharedservice.getData('products')
-            .subscribe(
-                products => {
-                    this.products = products;
-                }
-            )
+        //promise to get the data here
+        this.sharedservice.getDataUsingPromise('products')
+            .then(result => {
+                console.log('result here', result)
+                this.products = result
+            })
     }
 }

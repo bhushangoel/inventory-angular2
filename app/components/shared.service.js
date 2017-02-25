@@ -11,8 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('./const.service');
-require('rxjs/add/operator/map');
-require('rxjs/add/operator/catch');
 var const_service_1 = require("./const.service");
 var Products = (function () {
     function Products(name, description, category, price, quantity) {
@@ -31,11 +29,21 @@ var SharedService = (function () {
     }
     //using rxJs to fetch data
     SharedService.prototype.getData = function (url) {
-        return this.http.get("" + const_service_1.config.apiPathProd + url)
+        var urlPath = "" + const_service_1.config.apiPathProd + url;
+        return this.http
+            .get(urlPath)
             .map(function (response) { return response.json(); });
     };
+    SharedService.prototype.getDataUsingPromise = function (url) {
+        var urlPath = "" + const_service_1.config.apiPathProd + url;
+        return this.http
+            .get(urlPath)
+            .map(function (response) { return response.json(); })
+            .toPromise();
+    };
     SharedService.prototype.addData = function (url, data) {
-        return this.http.post("" + const_service_1.config.apiPathProd + url, data)
+        return this.http
+            .post("" + const_service_1.config.apiPathProd + url, data)
             .map(function (response) { return console.log(response); });
     };
     SharedService = __decorate([

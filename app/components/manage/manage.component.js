@@ -13,16 +13,17 @@ var shared_service_1 = require('../shared.service');
 var ManageComponent = (function () {
     function ManageComponent(sharedservice) {
         this.sharedservice = sharedservice;
-        this.products = [];
     }
     ManageComponent.prototype.ngOnInit = function () {
         this.loadData();
     };
     ManageComponent.prototype.loadData = function () {
         var _this = this;
-        this.sharedservice.getData('products')
-            .subscribe(function (products) {
-            _this.products = products;
+        //promise to get the data here
+        this.sharedservice.getDataUsingPromise('products')
+            .then(function (result) {
+            console.log('result here', result);
+            _this.products = result;
         });
     };
     ManageComponent = __decorate([

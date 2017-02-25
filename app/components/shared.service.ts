@@ -1,8 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import './const.service';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 import {config} from "./const.service";
 
 
@@ -20,12 +18,23 @@ export class SharedService {
 
     //using rxJs to fetch data
     getData(url: string) {
-        return this.http.get(`${config.apiPathProd}${url}`)
+        let urlPath = `${config.apiPathProd}${url}`;
+        return this.http
+            .get(urlPath)
             .map((response: Response) => response.json())
     }
 
+    getDataUsingPromise(url: string) {
+        let urlPath = `${config.apiPathProd}${url}`;
+        return this.http
+            .get(urlPath)
+            .map((response: Response) => response.json())
+            .toPromise()
+    }
+
     addData(url: string, data: {}) {
-        return this.http.post(`${config.apiPathProd}${url}`, data)
+        return this.http
+            .post(`${config.apiPathProd}${url}`, data)
             .map((response: Response) => console.log(response))
     }
 }
