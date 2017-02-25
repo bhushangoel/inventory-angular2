@@ -9,15 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
+var shared_service_1 = require('../../shared.service');
 var SignupComponent = (function () {
-    function SignupComponent() {
+    function SignupComponent(sharedService) {
+        this.sharedService = sharedService;
     }
+    SignupComponent.prototype.ngOnInit = function () {
+        this.myForm = new forms_1.FormGroup({
+            name: new forms_1.FormControl('', [forms_1.Validators.required]),
+            email: new forms_1.FormControl('', [forms_1.Validators.required]),
+            password: new forms_1.FormControl('', [forms_1.Validators.required])
+        });
+    };
+    SignupComponent.prototype.submit = function (_a) {
+        var value = _a.value, valid = _a.valid;
+        if (!valid) {
+            return;
+        }
+        else {
+            this.sharedService.addData('users', value)
+                .subscribe(function (result) { return console.log('result: ', result); });
+        }
+    };
     SignupComponent = __decorate([
         core_1.Component({
             selector: 'signup',
-            templateUrl: 'app/components/authComponent/signup/signup.component.html'
+            templateUrl: 'app/components/authComponent/signup/signup.component.html',
+            providers: [shared_service_1.SharedService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [shared_service_1.SharedService])
     ], SignupComponent);
     return SignupComponent;
 }());

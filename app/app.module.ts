@@ -2,7 +2,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpModule} from '@angular/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import './components/rxjs.service';
 
 //components
@@ -17,7 +17,7 @@ import {TruncatePipe} from './components/pipes';
 
 //decorator
 @NgModule({
-    imports: [BrowserModule, HttpModule, FormsModule, AppRoutingModule],
+    imports: [BrowserModule, HttpModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
     declarations: [AppComponent, TruncatePipe, RoutableComponents],
     bootstrap: [AppComponent],
     providers: [SharedService]

@@ -24,14 +24,16 @@ var AddProductComponent = (function () {
             .subscribe(function (result) { return _this.categories = result; });
     };
     AddProductComponent.prototype.save = function (addForm) {
+        var _this = this;
         if (!addForm.valid) {
             return;
         }
         else {
             this.showPreview = true;
-            this.formData = {};
             this.sharedService.addData('products', this.formData)
-                .subscribe(function (result) { return console.log(result); });
+                .subscribe(function (result) {
+                _this.formData = {};
+            });
         }
     };
     AddProductComponent = __decorate([

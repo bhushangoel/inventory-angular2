@@ -28,9 +28,10 @@ export class AddProductComponent {
         }
         else {
             this.showPreview = true;
-            this.formData = {};
             this.sharedService.addData('products', this.formData)
-                .subscribe((result) => console.log(result))
+                .subscribe((result) => {
+                    this.formData = {};
+                })
         }
     }
 }
