@@ -19,6 +19,8 @@ var app_component_1 = require('./app.component');
 var app_routing_module_1 = require('./app-routing.module');
 //services
 var shared_service_1 = require('./components/shared.service');
+var user_profile_service_1 = require('./components/authComponent/login/user-profile.service');
+var can_activate_service_1 = require('./components/can-activate.service');
 //pipes
 var pipes_1 = require('./components/pipes');
 //decorator
@@ -30,7 +32,7 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, app_routing_module_1.AppRoutingModule, forms_1.ReactiveFormsModule],
             declarations: [app_component_1.AppComponent, pipes_1.TruncatePipe, app_routing_module_1.RoutableComponents],
             bootstrap: [app_component_1.AppComponent],
-            providers: [shared_service_1.SharedService]
+            providers: [shared_service_1.SharedService, can_activate_service_1.CanActivateAuthGuard, user_profile_service_1.UserProfileService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

@@ -11,6 +11,8 @@ import {AppRoutingModule, RoutableComponents} from './app-routing.module';
 
 //services
 import {SharedService} from './components/shared.service';
+import {UserProfileService} from './components/authComponent/login/user-profile.service';
+import {CanActivateAuthGuard} from './components/can-activate.service';
 
 //pipes
 import {TruncatePipe} from './components/pipes';
@@ -20,7 +22,7 @@ import {TruncatePipe} from './components/pipes';
     imports: [BrowserModule, HttpModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
     declarations: [AppComponent, TruncatePipe, RoutableComponents],
     bootstrap: [AppComponent],
-    providers: [SharedService]
+    providers: [SharedService, CanActivateAuthGuard, UserProfileService]
 })
 
 export class AppModule {

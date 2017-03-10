@@ -16,12 +16,23 @@ var addProduct_component_1 = require('./components/addProduct/addProduct.compone
 var editProduct_component_1 = require('./components/editProduct/editProduct.component');
 var login_component_1 = require('./components/authComponent/login/login.component');
 var signup_component_1 = require('./components/authComponent/signup/signup.component');
+var productDetail_component_1 = require('./components/productDetail/productDetail.component');
+//auth guard
+var can_activate_service_1 = require('./components/can-activate.service');
 //Routes
 var appRoutes = [
     { path: '', component: home_component_1.HomeComponent },
-    { path: 'manage', component: manage_component_1.ManageComponent },
-    { path: 'manage/product/add', component: addProduct_component_1.AddProductComponent },
-    { path: 'manage/product/edit/:id', component: editProduct_component_1.EditProductComponent },
+    {
+        path: 'manage',
+        component: manage_component_1.ManageComponent,
+        canActivate: [can_activate_service_1.CanActivateAuthGuard],
+        canActivateChild: [can_activate_service_1.CanActivateAuthGuard],
+        children: [
+            { path: 'product/add', component: addProduct_component_1.AddProductComponent },
+            { path: 'product/edit/:id', component: editProduct_component_1.EditProductComponent }
+        ]
+    },
+    { path: 'product/:id', component: productDetail_component_1.productDetail },
     { path: 'login', component: login_component_1.LoginComponent },
     { path: 'signup', component: signup_component_1.SignupComponent },
     { path: '**', component: home_component_1.HomeComponent }
@@ -45,6 +56,7 @@ exports.RoutableComponents = [
     addProduct_component_1.AddProductComponent,
     editProduct_component_1.EditProductComponent,
     login_component_1.LoginComponent,
-    signup_component_1.SignupComponent
+    signup_component_1.SignupComponent,
+    productDetail_component_1.productDetail
 ];
 //# sourceMappingURL=app-routing.module.js.map

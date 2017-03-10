@@ -1,4 +1,7 @@
 import {Component} from '@angular/core';
+// import {SharedService} from './components/shared.service';
+import {UserProfileService} from './components/authComponent/login/user-profile.service';
+
 
 @Component({
     selector: 'my-app',
@@ -6,5 +9,6 @@ import {Component} from '@angular/core';
 })
 
 export class AppComponent {
-
+    constructor(public userService: UserProfileService) {
+    }
 }

@@ -1,24 +1,18 @@
-import {Component} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router, ActivatedRoute, Params} from '@angular/router';
 import {SharedService} from '../shared.service';
 
 
 @Component({
-    selector: 'editproduct',
-    templateUrl: 'app/components/addProduct/addProduct.component.html',
+    selector: 'productDetail',
+    templateUrl: 'app/components/productDetail/productDetail.component.html',
     providers: [SharedService]
 })
 
-export class EditProductComponent {
-    formData = {};
+export class productDetail implements OnInit{
+    details = {};
 
     constructor(private route: ActivatedRoute, private sharedService: SharedService) {
-        this.loadCategories();
-    }
-
-    loadCategories() {
-        this.sharedService.getData('categories')
-            .subscribe((result) => this.categories = result)
     }
 
     ngOnInit() {
@@ -31,7 +25,7 @@ export class EditProductComponent {
     getProduct() {
         this.sharedService.getData(`products/${this.id}`)
             .subscribe(result => {
-                this.formData = result;
+                this.details = result;
             })
     }
 }

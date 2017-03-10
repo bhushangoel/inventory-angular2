@@ -9,20 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// import {SharedService} from './components/shared.service';
-var user_profile_service_1 = require('./components/authComponent/login/user-profile.service');
-var AppComponent = (function () {
-    function AppComponent(userService) {
-        this.userService = userService;
+var UserProfileService = (function () {
+    function UserProfileService() {
+        this.isLoggedIn = false;
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.component.html'
-        }), 
-        __metadata('design:paramtypes', [user_profile_service_1.UserProfileService])
-    ], AppComponent);
-    return AppComponent;
+    UserProfileService.prototype.setLoggedInStatus = function (status) {
+        console.log('status: ', status);
+        this.isLoggedIn = status;
+        console.log('this.isLoggedIn : ', this.isLoggedIn);
+    };
+    UserProfileService.prototype.getLoggedInStatus = function () {
+        return this.isLoggedIn;
+    };
+    UserProfileService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], UserProfileService);
+    return UserProfileService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.UserProfileService = UserProfileService;
+//# sourceMappingURL=user-profile.service.js.map
