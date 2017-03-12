@@ -18,13 +18,11 @@ const appRoutes: Routes = [
     {
         path: 'manage',
         component: ManageComponent,
-        canActivate: [CanActivateAuthGuard],
-        canActivateChild: [CanActivateAuthGuard],
-        children: [
-            {path: 'product/add', component: AddProductComponent},
-            {path: 'product/edit/:id', component: EditProductComponent}
-        ]
+        canActivate: [CanActivateAuthGuard]
     },
+    {path: 'manage', component: ManageComponent, canActivate: [CanActivateAuthGuard]},
+    {path: 'manage/product/add', component: AddProductComponent, canActivate: [CanActivateAuthGuard]},
+    {path: 'manage/product/edit/:id', component: EditProductComponent, canActivate: [CanActivateAuthGuard]},
     {path: 'product/:id', component: productDetail},
     {path: 'login', component: LoginComponent},
     {path: 'signup', component: SignupComponent},

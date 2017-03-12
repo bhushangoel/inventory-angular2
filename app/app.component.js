@@ -15,6 +15,9 @@ var AppComponent = (function () {
     function AppComponent(userService) {
         this.userService = userService;
     }
+    AppComponent.prototype.isLoggedIn = function () {
+        return this.userService.getLoggedInStatus();
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',

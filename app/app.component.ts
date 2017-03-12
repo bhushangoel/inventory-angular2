@@ -11,4 +11,8 @@ import {UserProfileService} from './components/authComponent/login/user-profile.
 export class AppComponent {
     constructor(public userService: UserProfileService) {
     }
+
+    isLoggedIn() {
+        return this.userService.getLoggedInStatus();
+    }
 }

@@ -25,13 +25,11 @@ var appRoutes = [
     {
         path: 'manage',
         component: manage_component_1.ManageComponent,
-        canActivate: [can_activate_service_1.CanActivateAuthGuard],
-        canActivateChild: [can_activate_service_1.CanActivateAuthGuard],
-        children: [
-            { path: 'product/add', component: addProduct_component_1.AddProductComponent },
-            { path: 'product/edit/:id', component: editProduct_component_1.EditProductComponent }
-        ]
+        canActivate: [can_activate_service_1.CanActivateAuthGuard]
     },
+    { path: 'manage', component: manage_component_1.ManageComponent, canActivate: [can_activate_service_1.CanActivateAuthGuard] },
+    { path: 'manage/product/add', component: addProduct_component_1.AddProductComponent, canActivate: [can_activate_service_1.CanActivateAuthGuard] },
+    { path: 'manage/product/edit/:id', component: editProduct_component_1.EditProductComponent, canActivate: [can_activate_service_1.CanActivateAuthGuard] },
     { path: 'product/:id', component: productDetail_component_1.productDetail },
     { path: 'login', component: login_component_1.LoginComponent },
     { path: 'signup', component: signup_component_1.SignupComponent },

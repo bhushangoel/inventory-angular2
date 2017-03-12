@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deee2821-d878-4560-8448-9755a66261f1" name="Default" comment="added signup page">
+    <list default="true" id="deee2821-d878-4560-8448-9755a66261f1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-routing.module.js" afterPath="$PROJECT_DIR$/app/app-routing.module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-routing.module.js.map" afterPath="$PROJECT_DIR$/app/app-routing.module.js.map" />
@@ -10,16 +10,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.js" afterPath="$PROJECT_DIR$/app/app.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.js.map" afterPath="$PROJECT_DIR$/app/app.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.ts" afterPath="$PROJECT_DIR$/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.js" afterPath="$PROJECT_DIR$/app/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.js.map" afterPath="$PROJECT_DIR$/app/app.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.ts" afterPath="$PROJECT_DIR$/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/authComponent/login/login.component.html" afterPath="$PROJECT_DIR$/app/components/authComponent/login/login.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/authComponent/login/login.component.js" afterPath="$PROJECT_DIR$/app/components/authComponent/login/login.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/authComponent/login/login.component.js.map" afterPath="$PROJECT_DIR$/app/components/authComponent/login/login.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/authComponent/login/login.component.ts" afterPath="$PROJECT_DIR$/app/components/authComponent/login/login.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/editProduct/editProduct.component.js.map" afterPath="$PROJECT_DIR$/app/components/editProduct/editProduct.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/editProduct/editProduct.component.ts" afterPath="$PROJECT_DIR$/app/components/editProduct/editProduct.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/home/home.component.html" afterPath="$PROJECT_DIR$/app/components/home/home.component.html" />
     </list>
     <ignored path="support-angular2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app-routing.module.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app-routing.module.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/app-routing.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="336">
+              <caret line="24" column="106" selection-start-line="24" selection-start-column="106" selection-end-line="24" selection-end-column="106" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -67,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="210">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -92,8 +82,8 @@
       <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+            <state relative-caret-position="300">
+              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
@@ -187,13 +177,13 @@
         <option value="$PROJECT_DIR$/app/components/productDetail/productDetail.component.html" />
         <option value="$PROJECT_DIR$/app/components/productDetail/productDetail.component.ts" />
         <option value="$PROJECT_DIR$/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/app/components/authComponent/login/login.component.html" />
         <option value="$PROJECT_DIR$/app/components/authComponent/login/user-profile.service.ts" />
         <option value="$PROJECT_DIR$/app/components/can-activate.service.ts" />
         <option value="$PROJECT_DIR$/app/components/authComponent/login/login.component.ts" />
         <option value="$PROJECT_DIR$/app/app.component.html" />
         <option value="$PROJECT_DIR$/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/app/app-routing.module.ts" />
       </list>
     </option>
   </component>
@@ -344,7 +334,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nodeFile.js" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="FullScreen" value="true" />
@@ -431,7 +421,7 @@
       <workItem from="1487960591353" duration="11801000" />
       <workItem from="1488192953919" duration="292000" />
       <workItem from="1488262002028" duration="3002000" />
-      <workItem from="1489160940945" duration="6183000" />
+      <workItem from="1489160940945" duration="7796000" />
     </task>
     <task id="LOCAL-00001" summary="angular2 app setup -2">
       <created>1486926946459</created>
@@ -510,11 +500,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488054718714</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="route guard added">
+      <created>1489177506770</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1489177506770</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45978000" />
+    <option name="totallyTimeSpent" value="47591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -590,7 +587,8 @@
     <MESSAGE value="implementing pipes" />
     <MESSAGE value="adding some new components, using promise method to fetch data" />
     <MESSAGE value="added signup page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added signup page" />
+    <MESSAGE value="route guard added" />
+    <option name="LAST_COMMIT_MESSAGE" value="route guard added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -813,14 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../nodeFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="780" column="5" selection-start-line="760" selection-start-column="4" selection-end-line="780" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/manage/manage.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -903,29 +893,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/authComponent/login/user-profile.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/authComponent/login/login.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/authComponent/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="76" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -950,20 +932,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/authComponent/login/login.component.ts">
+    <entry file="file://$PROJECT_DIR$/../nodeFile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="76" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1890">
+          <caret line="756" column="28" selection-start-line="756" selection-start-column="28" selection-end-line="756" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/authComponent/login/user-profile.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        <state relative-caret-position="300">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
@@ -973,9 +961,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="210">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="24" column="106" selection-start-line="24" selection-start-column="106" selection-end-line="24" selection-end-column="106" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
